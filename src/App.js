@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Character from './components/Character';
 
 const App = () => {
@@ -12,8 +12,9 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
     .then(resp => {
-      // console.log(resp.data)
+
       setData(resp.data)
+    
     })
     .catch(error => {
       console.error(error)

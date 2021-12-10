@@ -6,10 +6,9 @@ const Character = (props) =>{
     const {data} = props;
     
     return (
-        data.map((char, index)=>{
-            console.log(char)
-        })
-        
+      data.map( char => {
+          return char.name
+      })
     )
 }
 
