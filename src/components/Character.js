@@ -1,5 +1,5 @@
 // Write your Character component here
-import react from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledCharacter = styled.div`
@@ -14,7 +14,8 @@ border-radius: 10%;
 border: 1px solid red;
 
 &:hover{
-    display:none;
+    opacity: 0;
+    transition: .3s;
 }
 `
 
@@ -23,8 +24,8 @@ const Character = (props) =>{
     
     return (
     <StyledCharacter>
-      {data.map( char => {
-          return char.name
+      {data.map( (char, index) => {
+          return `Character ${index + 1}: ${char.name}. `
       })}
     </StyledCharacter>
     )

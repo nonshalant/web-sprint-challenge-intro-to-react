@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Character from './components/Character';
+import Height from './components/Height';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -28,6 +29,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <Character  data={data}/>
+      <Height data={data} />
     </div>
   );
 }
